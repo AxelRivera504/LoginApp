@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:login_app/presentation/screens/screens.dart';
 
 final appRouter = GoRouter(
-  initialLocation: '/login/0',
+  initialLocation: '/signup/0',
   routes: [
 
     //Ruta Login
@@ -17,7 +17,7 @@ final appRouter = GoRouter(
     
     //Ruta SingUp
     GoRoute(
-      path: 'signup/:id',
+      path: '/signup/:page',
       name: SignUpScreen.name,
       builder: (context, state) {
         final pageIndex = state.pathParameters['page'] ?? '0';
@@ -28,7 +28,7 @@ final appRouter = GoRouter(
 
     //Ruta HomeScreen
     GoRoute(
-      path: 'home/:id',
+      path: '/home/:id',
       name: HomeScreen.name,
       builder: (context, state) {
         final pageIndex = state.pathParameters['page'] ?? '0';
