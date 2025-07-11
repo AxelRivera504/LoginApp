@@ -17,8 +17,6 @@ class AppTheme {
           onTertiary: Colors.white,
           error: Color(0xFFB00020),
           onError: Colors.white,
-          background: Color(0xFFF5F5F5),
-          onBackground: Colors.black,
           surface: Colors.white,
           onSurface: Colors.black,
         ),
