@@ -78,9 +78,10 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).colorScheme.tertiary,
       appBar: AppBar(
         leading: BackButton(onPressed: () => context.go('/login/0')),
-        backgroundColor: Colors.black,
+        backgroundColor: Theme.of(context).colorScheme.tertiary,
         elevation: 0,
       ),
       body: Padding(
