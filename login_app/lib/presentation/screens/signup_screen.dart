@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:login_app/widgets/custom_text_field.dart';
+import 'package:login_app/presentation/widgets/custom_text_field.dart';
 
 class SignUpScreen extends StatefulWidget {
   static const String name = 'signup_screen';
