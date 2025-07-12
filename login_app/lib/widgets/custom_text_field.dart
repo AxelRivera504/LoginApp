@@ -22,7 +22,7 @@ class CustomTextField extends StatelessWidget {
       controller: controller,
       obscureText: obscureText,
       keyboardType: keyboardType,
-      style: const TextStyle(color: Colors.white), // ← texto en blanco
+      style: const TextStyle(color: Colors.white), 
       cursorColor: Colors.white,
       decoration: InputDecoration(
         labelText: label,
@@ -45,7 +45,7 @@ class CustomTextField extends StatelessWidget {
           borderSide: const BorderSide(color: Colors.white),
         ),
         filled: true,
-        fillColor: Colors.transparent, // ← evita fondo blanco
+        fillColor: Colors.transparent, 
       ),
     );
   }

@@ -71,7 +71,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
       return;
     }
 
-    // TODO: Guardar valores o continuar
+    // Guardar valores o continuar
     print('Formulario válido. Nombre: $name, Correo: $email');
   }
 
