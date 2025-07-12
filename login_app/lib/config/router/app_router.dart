@@ -2,7 +2,7 @@ import 'package:go_router/go_router.dart';
 import 'package:login_app/presentation/screens/screens.dart';
 
 final appRouter = GoRouter(
-  initialLocation: '/signup/0',
+  initialLocation: '/login/0',
   routes: [
 
     //Ruta Login
