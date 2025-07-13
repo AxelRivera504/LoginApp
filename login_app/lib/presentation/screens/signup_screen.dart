@@ -71,6 +71,26 @@ class _SignUpScreenState extends State<SignUpScreen> {
       return;
     }
 
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        backgroundColor: Colors.green[600],
+        content: Text('¡Usuario creado con éxito!'),
+      ),
+    );
+
+    // Limpiar los campos:
+    _nameController.clear();
+    _emailController.clear();
+    _passwordController.clear();
+    _confirmPasswordController.clear();
+
+    // (Opcional) Si necesitas resetear visibilidad de contraseña:
+    setState(() {
+      _obscurePassword = true;
+      _obscureConfirmPassword = true;
+    });
+
+
     // Guardar valores o continuar
     print('Formulario válido. Nombre: $name, Correo: $email');
   }
@@ -153,14 +173,14 @@ class _SignUpScreenState extends State<SignUpScreen> {
 
             ElevatedButton.icon(
               onPressed: () {},
-              icon: const Icon(Icons.g_mobiledata, size: 40),
+              icon: const Icon(Icons.g_mobiledata, size: 40, color: Colors.white),
               label: const Text("Google", style: TextStyle(color: Colors.white)),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.grey[800]),
             ),
             const SizedBox(height: 8),
             ElevatedButton.icon(
               onPressed: () {},
-              icon: const Icon(Icons.facebook, size: 25),
+              icon: const Icon(Icons.facebook, size: 25, color: Colors.white),
               label: const Text("Facebook", style: TextStyle(color: Colors.white)),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.grey[800]),
             ),
