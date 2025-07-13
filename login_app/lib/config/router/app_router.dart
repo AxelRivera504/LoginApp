@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:login_app/presentation/clases/integrantes.dart';
 import 'package:login_app/presentation/screens/screens.dart';
 
 final appRouter = GoRouter(
@@ -28,12 +29,15 @@ final appRouter = GoRouter(
 
     //Ruta HomeScreen
     GoRoute(
-      path: '/home/:id',
+      path: '/home/:page',
       name: HomeScreen.name,
       builder: (context, state) {
         final pageIndex = state.pathParameters['page'] ?? '0';
-
-        return HomeScreen( pageIndex:int.parse(pageIndex));
+        final integrante = state.extra as Integrantes?;
+        return HomeScreen(
+          pageIndex: int.parse(pageIndex),
+          integrante: integrante,
+        );
       },
     ),
   ]

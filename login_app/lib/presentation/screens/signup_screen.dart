@@ -17,7 +17,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _confirmPasswordController = TextEditingController();
-
+  
   bool _obscurePassword = true;
   bool _obscureConfirmPassword = true;
 
@@ -80,10 +80,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.tertiary,
       appBar: AppBar(
-        leading: BackButton(onPressed: () => context.go('/login/0')),
-        backgroundColor: Theme.of(context).colorScheme.tertiary,
-        elevation: 0,
-      ),
+          backgroundColor: Theme.of(context).colorScheme.tertiary,
+          elevation: 0,
+          centerTitle: true,
+          leading: Container(
+            margin: const EdgeInsets.all(8),
+            child: IconButton(
+              padding: EdgeInsets.zero,
+              constraints: BoxConstraints(),
+              icon: Icon(Icons.arrow_back_ios),
+              color: Colors.white,
+              onPressed: () => context.go('/login/0'),
+            ),
+          ),
+        ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 24.0),
         child: ListView(

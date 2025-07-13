@@ -6,6 +6,8 @@ class CustomTextField extends StatelessWidget {
   final bool obscureText;
   final VoidCallback? toggleVisibility;
   final TextInputType keyboardType;
+  final BorderRadius borderRadiusEnabled;
+  final BorderRadius borderRadiusFocus;
 
   const CustomTextField({
     super.key,
@@ -14,6 +16,8 @@ class CustomTextField extends StatelessWidget {
     this.obscureText = false,
     this.toggleVisibility,
     this.keyboardType = TextInputType.text,
+    this.borderRadiusEnabled  = const BorderRadius.all(Radius.circular(30)),
+    this.borderRadiusFocus    = const BorderRadius.all(Radius.circular(30)),
   });
 
   @override
@@ -37,11 +41,11 @@ class CustomTextField extends StatelessWidget {
               )
             : null,
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: borderRadiusEnabled,
           borderSide: const BorderSide(color: Colors.white),
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(12),
+          borderRadius: borderRadiusFocus,
           borderSide: const BorderSide(color: Colors.white),
         ),
         filled: true,
