@@ -20,7 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   final _confirmPasswordController = TextEditingController();
   List<Integrantes> integrantes = [
     Integrantes("dario.rivera@unah.hn", "20212020267", "Axel Rivera"),
-    Integrantes("eduardo.garcia@unah.hn", "20212020268", "Eduardo Garcia"),
+    Integrantes("exgarcia@unah.hn", "20182000505", "Eduardo Garcia"),
   ];
 
 

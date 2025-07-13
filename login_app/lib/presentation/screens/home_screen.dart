@@ -8,10 +8,10 @@ class HomeScreen extends StatelessWidget {
   final Integrantes? integrante;
 
   const HomeScreen({
-    Key? key,
+    super.key,
     required this.pageIndex,
     required this.integrante,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

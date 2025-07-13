@@ -139,28 +139,28 @@ class _SignUpScreenState extends State<SignUpScreen> {
               onPressed: _signUp,
               style: ElevatedButton.styleFrom(
                 backgroundColor: Theme.of(context).colorScheme.primary,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
                 padding: const EdgeInsets.symmetric(vertical: 16),
               ),
-              child: const Text("Crear Cuenta", style: TextStyle(fontSize: 18)),
+              child: const Text("Crear Cuenta", style: TextStyle(fontSize: 18, color: Colors.white)),
             ),
             const SizedBox(height: 16),
 
             const Center(
-              child: Text("O o también puedes registrarte con:", style: TextStyle(color: Colors.white)),
+              child: Text("O también puedes registrarte con:", style: TextStyle(color: Colors.white)),
             ),
             const SizedBox(height: 16),
 
             ElevatedButton.icon(
               onPressed: () {},
-              icon: const Icon(Icons.g_mobiledata),
+              icon: const Icon(Icons.g_mobiledata, size: 40),
               label: const Text("Google", style: TextStyle(color: Colors.white)),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.grey[800]),
             ),
             const SizedBox(height: 8),
             ElevatedButton.icon(
               onPressed: () {},
-              icon: const Icon(Icons.facebook),
+              icon: const Icon(Icons.facebook, size: 25),
               label: const Text("Facebook", style: TextStyle(color: Colors.white)),
               style: ElevatedButton.styleFrom(backgroundColor: Colors.grey[800]),
             ),
